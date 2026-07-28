@@ -1,6 +1,6 @@
 import { SiteFooter, SiteHeader } from "../SiteChrome";
 
-const bookingUrl = "https://www.hdphotohub.com/";
+const bookingUrl = "https://darkroomrealestatephotographywg.hd.pics/order";
 
 const photoPackages = [
   ["Up to 1,999 sq. ft.", "20–25 photos", "24-hour turnaround", "$150"],
@@ -25,7 +25,7 @@ export default function ServicesPage() {
     <SiteHeader active="services"/>
 
     <section className="pricing-hero subpage-cinematic">
-      <figure><img src="/wills-favorite-house.png" alt="Welcoming suburban home photographed at twilight by Dark Room Photography"/><figcaption><span>Services for real listings</span><strong>Every property deserves to show up well</strong></figcaption></figure>
+      <figure><img src="/portfolio/residential-suburban-exterior-front-01.webp" alt="Professionally photographed suburban home by Dark Room Photography"/><figcaption><span>Services for real listings</span><strong>Every property deserves to show up well</strong></figcaption></figure>
       <div className="subpage-hero-copy"><div><p className="eyebrow">Services &amp; straightforward pricing</p><h1>Coverage built<br/><em>around your listing.</em></h1></div><div><p>Clear pricing, dependable turnaround, and professional media designed to help every property show at its best.</p><a className="button" href={bookingUrl} target="_blank" rel="noreferrer">Book through HD Photo Hub <span aria-hidden="true">↗</span></a></div></div>
     </section>
 

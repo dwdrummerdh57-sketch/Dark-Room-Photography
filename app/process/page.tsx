@@ -1,6 +1,6 @@
 import { SiteFooter, SiteHeader } from "../SiteChrome";
 
-const bookingUrl = "https://www.hdphotohub.com/";
+const bookingUrl = "https://darkroomrealestatephotographywg.hd.pics/order";
 
 export default function ProcessPage() {
   return <main className="process-page">
@@ -8,7 +8,7 @@ export default function ProcessPage() {
 
     <section className="process-hero">
       <div><p className="eyebrow">Our process</p><h1>From scheduled<br/><em>to market-ready.</em></h1><p>A clear, dependable workflow that keeps your listing moving from appointment to market.</p><a className="button" href={bookingUrl} target="_blank" rel="noreferrer">Schedule through HD Photo Hub <span aria-hidden="true">↗</span></a></div>
-      <figure><img src="/wills-favorite-house.png" alt="Welcoming suburban home photographed at twilight by Dark Room Photography"/><figcaption><span>Simple by design</span><strong>Know what happens at every step</strong></figcaption></figure>
+      <figure><img src="/portfolio/interior-living-room-1212.webp" alt="Bright residential living room prepared for professional real estate photography"/><figcaption><span>Simple by design</span><strong>Know what happens at every step</strong></figcaption></figure>
     </section>
 
     <section className="process-proof" aria-label="Service expectations"><span>One-hour response</span><span>30–90 minute appointments</span><span>24-hour photo turnaround</span><span>48-hour video turnaround</span></section>

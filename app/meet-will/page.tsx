@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { SiteFooter, SiteHeader } from "../SiteChrome";
 
-const bookingUrl = "https://www.hdphotohub.com/";
+const bookingUrl = "https://darkroomrealestatephotographywg.hd.pics/order";
 
 type FutureBrandPhotoProps = {
   alt: string;
@@ -28,7 +28,7 @@ function FutureBrandPhoto({
   return (
     <figure className={`future-brand-photo ${className}`.trim()}>
       {/* Replace this file in /public when the finished brand photograph is available. */}
-      <Image src={`/${fileName}`} width={width} height={height} alt={alt} />
+      <Image src={`/${fileName}`} width={width} height={height} alt={alt} unoptimized />
       <figcaption>
         <span>Future Brand Photography</span>
         <strong>{title}</strong>
@@ -61,6 +61,7 @@ export default function MeetWillPage() {
           width="1140"
           height="1380"
           alt="Will Gasper, founder of Dark Room Real Estate Photography, holding his camera."
+          unoptimized
         />
       </figure>
       <div className="meet-story">

@@ -1,7 +1,7 @@
 import PortfolioGallery from "./PortfolioGallery";
 import { SiteFooter, SiteHeader } from "../SiteChrome";
 
-const bookingUrl = "https://www.hdphotohub.com/";
+const bookingUrl = "https://darkroomrealestatephotographywg.hd.pics/order";
 
 export default function PortfolioPage(){
   return <main className="portfolio-page">

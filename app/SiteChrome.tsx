@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const bookingUrl = "https://www.hdphotohub.com/";
+const bookingUrl = "https://darkroomrealestatephotographywg.hd.pics/order";
 
 type NavKey = "home" | "services" | "process" | "portfolio" | "meet-will";
 
@@ -15,9 +15,9 @@ const navigation = [
 export function SiteHeader({ active }: { active: NavKey }) {
   const links = active === "home" ? navigation.slice(1) : navigation;
 
-  return <header className="site-header">
+  return <header className={`site-header${active === "home" ? " site-header-home" : ""}`}>
     <Link className="brand" href="/" aria-label="Dark Room Photography home">
-      <img src="/dark-room-logo.png" alt=""/>
+      <img src="/dark-room-logo-light.webp" alt=""/>
       <span><strong>Dark Room</strong><small>Real Estate Photography</small></span>
     </Link>
     <nav aria-label="Main navigation">
@@ -34,11 +34,47 @@ export function SiteHeader({ active }: { active: NavKey }) {
 }
 
 export function SiteFooter() {
-  return <footer>
-    <div className="footer-brand"><img src="/dark-room-logo.png" alt="Dark Room Real Estate Photography"/><p>Comfortable service.<br/>Standout media.<br/>Dependable delivery.</p></div>
-    <div><strong>Navigate</strong><Link href="/">Home</Link><Link href="/services">Services</Link><Link href="/process">Our Process</Link><Link href="/portfolio">Portfolio</Link><Link href="/meet-will">Meet Will</Link></div>
-    <div><strong>Hours</strong><p>Monday–Friday<br/>8 AM–5 PM</p></div>
-    <div><strong>Ready to book?</strong><a href={bookingUrl} target="_blank" rel="noreferrer">HD Photo Hub <span aria-hidden="true">↗</span></a></div>
-    <p className="copyright">© 2026 Dark Room Real Estate Photography</p>
+  return <footer className="site-footer">
+    <div className="site-footer-inner">
+      <div className="footer-brand">
+        <img src="/dark-room-logo-light.webp" alt="Dark Room Real Estate Photography"/>
+        <p className="footer-positioning">Real estate photography built around speed, quality, and reliability.</p>
+        <p className="footer-service-area">Serving Houston-area real estate agents, brokers, Airbnb hosts, and property managers.</p>
+      </div>
+      <div className="footer-section footer-navigation">
+        <strong>Navigation</strong>
+        <nav aria-label="Footer navigation">
+          <Link href="/">Home</Link>
+          <Link href="/services">Services</Link>
+          <Link href="/process">Our Process</Link>
+          <Link href="/portfolio">Portfolio</Link>
+          <Link href="/meet-will">Meet Will</Link>
+          <Link href="/#contact">Contact</Link>
+        </nav>
+      </div>
+      <div className="footer-section footer-business">
+        <div className="footer-hours">
+          <strong>Business Hours</strong>
+          <p>Monday–Friday<br/>8:00 AM–5:00 PM</p>
+          <p>Calls returned within one hour during business hours</p>
+        </div>
+        <div className="footer-trust">
+          <strong>Why Clients Choose Dark Room</strong>
+          <ul>
+            <li><span aria-hidden="true">✓</span>Fast delivery</li>
+            <li><span aria-hidden="true">✓</span>Supra eKEY certified</li>
+            <li><span aria-hidden="true">✓</span>Professional editing</li>
+            <li><span aria-hidden="true">✓</span>Reliable scheduling</li>
+          </ul>
+        </div>
+      </div>
+      <div className="footer-section footer-booking">
+        <strong>Ready to Book?</strong>
+        <a className="button footer-booking-button" href={bookingUrl} target="_blank" rel="noopener noreferrer">
+          Book a Photography Session <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+      <div className="copyright"><span>© 2026 Dark Room Real Estate Photography</span></div>
+    </div>
   </footer>;
 }
