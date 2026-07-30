@@ -57,7 +57,7 @@ export default function MeetWillPage() {
     <section className="meet-intro" aria-labelledby="meet-intro-title">
       <figure>
         <Image
-          src="/will-with-camera.png"
+          src="/will-headshot.png"
           width="1140"
           height="1380"
           alt="Will Gasper, founder of Dark Room Real Estate Photography, holding his camera."

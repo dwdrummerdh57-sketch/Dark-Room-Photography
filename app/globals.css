@@ -323,8 +323,21 @@ main{display:flex;flex-direction:column}
 .meet-hero h1{margin:0 0 18px;font-size:clamp(58px,6vw,76px)}
 .meet-hero>p:last-child{max-width:540px;margin:0;color:var(--mist);font:400 17px/1.7 "Source Serif 4",Georgia,serif}
 .meet-intro{max-width:1166px;margin:0 auto;padding:76px 0 94px;display:grid;grid-template-columns:minmax(360px,.82fr) minmax(0,1.18fr);gap:84px;align-items:center}
-.meet-intro figure{margin:0;overflow:hidden;background:#111617;border:1px solid var(--line);box-shadow:0 22px 54px rgba(0,0,0,.2)}
-.meet-intro figure img{width:100%;height:auto;aspect-ratio:1140/1380;object-fit:contain;object-position:center}
+.meet-intro figure {
+  margin: 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+}
+
+.meet-intro figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: cover;
+  object-position: center top;
+}
 .meet-story h2,.meet-purpose h2,.meet-trust h2,.meet-partnership h2,.meet-closing h2{margin:0;font-family:Manrope,Arial,sans-serif;font-weight:700;letter-spacing:-.045em;line-height:1.04}
 .meet-story h2{max-width:620px;font-size:clamp(38px,4vw,56px)}
 .meet-story>p:not(.eyebrow){max-width:640px;color:var(--mist);font:400 14px/1.78 "Source Serif 4",Georgia,serif}
