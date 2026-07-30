@@ -81,10 +81,88 @@ actions tied to the current ChatGPT user. Leave public content anonymous.
 
 - `npm run dev`: start local development
 - `npm run build`: verify the vinext build output
+- `npm run deploy`: build and deploy to Cloudflare Workers
+- `npm run deploy:preview`: build and deploy a Cloudflare preview version
 - `npm test`: build the starter and verify its rendered loading skeleton
 - `npm run db:generate`: generate Drizzle migrations after schema changes
+
+## Production Deployment on Cloudflare
+
+The site is configured as a Vinext application running on Cloudflare Workers.
+It is not a static GitHub Pages export. The Worker entry in
+`worker/index.ts` serves the Vinext App Router output and uses Cloudflare's
+asset and image bindings defined in `wrangler.jsonc`.
+
+### One-time Cloudflare setup
+
+1. Create or sign in to a Cloudflare account.
+2. Copy the Account ID from the Cloudflare dashboard.
+3. Create an API token at **My Profile → API Tokens** using the
+   **Edit Cloudflare Workers** template.
+4. In GitHub, open the repository and go to
+   **Settings → Secrets and variables → Actions**.
+5. Add these repository secrets:
+   - `CLOUDFLARE_ACCOUNT_ID`
+   - `CLOUDFLARE_API_TOKEN`
+
+### Deploy from GitHub Actions
+
+The workflow at `.github/workflows/deploy-cloudflare.yml` deploys on every push
+to `main`.
+
+1. Push or merge the approved release into `main`.
+2. Open the repository's **Actions** tab.
+3. Select **Deploy to Cloudflare Workers**.
+4. Wait for the build and deploy steps to complete.
+5. Open the `workers.dev` URL printed by the **Deploy Worker** step.
+
+The workflow can also be run manually with **Run workflow**.
+
+### Use Cloudflare's Git integration instead
+
+Choose this option instead of GitHub Actions if you want Cloudflare to own the
+build pipeline:
+
+1. Open **Cloudflare Dashboard → Workers & Pages → Create application**.
+2. Select **Import a repository**, authorize GitHub, and choose this repository.
+3. Set the Worker name to `dark-room-photography`. It must match
+   `wrangler.jsonc`.
+4. Set the production branch to `main`.
+5. Set the build command to `npm run build`.
+6. Keep the deploy command as `npx wrangler deploy`.
+7. Keep the root directory at the repository root.
+8. Select **Save and Deploy**.
+
+Cloudflare can create preview versions for non-production branches when branch
+builds are enabled under **Settings → Build → Branch control**. Use either this
+native integration or the included GitHub Actions workflow for automatic
+production deploys, not both.
+
+### Deploy from a local checkout
+
+```bash
+npm install
+npx wrangler login
+npm run deploy
+```
+
+Wrangler prints the production `workers.dev` URL after a successful deploy.
+To create a preview deployment instead, run:
+
+```bash
+npm run deploy:preview
+```
+
+### Connect a custom domain
+
+After the first deployment, open
+**Cloudflare Dashboard → Workers & Pages → dark-room-photography → Settings →
+Domains & Routes**, then add the production domain or subdomain. Cloudflare
+manages the route and TLS certificate after the domain is connected.
 
 ## Learn More
 
 - [vinext Documentation](https://github.com/cloudflare/vinext)
+- [Cloudflare Workers Vite plugin](https://developers.cloudflare.com/workers/vite-plugin/)
+- [Wrangler configuration](https://developers.cloudflare.com/workers/wrangler/configuration/)
 - [Drizzle D1 Guide](https://orm.drizzle.team/docs/get-started/d1-new)

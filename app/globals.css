@@ -238,18 +238,21 @@ main{display:flex;flex-direction:column}
 }
 
 /* Shared navigation additions */
+.site-header{position:relative;z-index:1000;isolation:isolate}
 .site-header nav .active{color:var(--copper)}
-.mobile-nav{position:relative;display:none;font-family:Manrope,Arial,sans-serif}
+.mobile-nav{position:relative;z-index:1100;display:none;font-family:Manrope,Arial,sans-serif}
 .mobile-nav summary{list-style:none;padding:10px 8px;color:var(--mist);font-size:8px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
 .mobile-nav summary::-webkit-details-marker{display:none}
 .mobile-nav summary:focus-visible{outline:2px solid var(--mist);outline-offset:3px}
+.mobile-nav[open]{z-index:1100}
 .mobile-nav[open] summary{color:#e0e5df}
-.mobile-nav>div{position:absolute;z-index:20;top:calc(100% + 12px);right:0;width:190px;padding:10px;background:#141a1d;border:1px solid var(--line);box-shadow:0 18px 40px rgba(0,0,0,.3)}
+.mobile-nav>div{position:absolute;z-index:1100;top:calc(100% + 12px);right:0;width:190px;padding:10px;background:rgb(20,26,29);border:1px solid var(--line);box-shadow:0 18px 40px rgba(0,0,0,.3)}
 .mobile-nav a{display:block;padding:11px 12px;color:var(--mist);font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
 .mobile-nav a:hover,.mobile-nav a.active{color:var(--copper)}
 .mobile-nav a:focus-visible{outline:2px solid var(--mist);outline-offset:-2px}
+.hero,.pricing-hero,.process-hero,.portfolio-hero,.meet-hero{position:relative;z-index:1}
 @media(max-width:900px){.mobile-nav{display:block}}
-@media(max-width:600px){.site-header{gap:10px}.mobile-nav summary{padding:10px 4px}.button-small{padding:11px 12px;font-size:8px}}
+@media(max-width:600px){.site-header{gap:10px}.mobile-nav summary{padding:10px 4px}.mobile-nav>div{position:fixed;top:61px;right:12px;max-width:calc(100vw - 24px)}.button-small{padding:11px 12px;font-size:8px}}
 
 /* Homepage refinement */
 .site-header-home .brand img{width:54px;height:54px;object-fit:contain;object-position:center;border:1px solid rgba(174,183,170,.24);background:#111516}
@@ -320,8 +323,21 @@ main{display:flex;flex-direction:column}
 .meet-hero h1{margin:0 0 18px;font-size:clamp(58px,6vw,76px)}
 .meet-hero>p:last-child{max-width:540px;margin:0;color:var(--mist);font:400 17px/1.7 "Source Serif 4",Georgia,serif}
 .meet-intro{max-width:1166px;margin:0 auto;padding:76px 0 94px;display:grid;grid-template-columns:minmax(360px,.82fr) minmax(0,1.18fr);gap:84px;align-items:center}
-.meet-intro figure{margin:0;overflow:hidden;background:#111617;border:1px solid var(--line);box-shadow:0 22px 54px rgba(0,0,0,.2)}
-.meet-intro figure img{width:100%;height:auto;aspect-ratio:1140/1380;object-fit:contain;object-position:center}
+.meet-intro figure {
+  margin: 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+}
+
+.meet-intro figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: cover;
+  object-position: center top;
+}
 .meet-story h2,.meet-purpose h2,.meet-trust h2,.meet-partnership h2,.meet-closing h2{margin:0;font-family:Manrope,Arial,sans-serif;font-weight:700;letter-spacing:-.045em;line-height:1.04}
 .meet-story h2{max-width:620px;font-size:clamp(38px,4vw,56px)}
 .meet-story>p:not(.eyebrow){max-width:640px;color:var(--mist);font:400 14px/1.78 "Source Serif 4",Georgia,serif}
