@@ -44,43 +44,68 @@ export default function Home(){return <main className="home-page">
   <div className="confidence-grid">
     <article>
       <span>01</span>
-      <h3>Supra eKEY Certified</h3>
-      <p>Professional access for occupied and secured properties.</p>
+
+      <div className="confidence-card-copy">
+        <h3>Supra eKEY Certified</h3>
+        <p>Professional access for occupied and secured properties.</p>
+      </div>
     </article>
 
     <article>
       <span>02</span>
-      <h3>HAR Affiliated</h3>
-      <p>Local industry knowledge and professional relationships.</p>
+
+      <div className="confidence-card-copy">
+        <h3>HAR Affiliated</h3>
+        <p>Local industry knowledge and professional relationships.</p>
+      </div>
     </article>
 
     <article>
       <span>03</span>
-      <h3>One-Hour Response</h3>
-      <p>Quick communication when your listing timeline matters.</p>
+
+      <div className="confidence-card-copy">
+        <h3>One-Hour Response</h3>
+        <p>Quick communication when your listing timeline matters.</p>
+      </div>
     </article>
 
     <article>
       <span>04</span>
-      <h3>Fast Turnaround</h3>
-      <p>Media delivered quickly so listings reach the market sooner.</p>
+
+      <div className="confidence-card-copy">
+        <h3>Fast Turnaround</h3>
+        <p>Media delivered quickly so listings reach the market sooner.</p>
+      </div>
     </article>
 
     <article>
       <span>05</span>
-      <h3>HD Photo Hub</h3>
-      <p>Simple scheduling, instant confirmation, and organized appointments.</p>
-    </article>
-  </div>
 
-  <a
-    className="button confidence-cta"
-    href={bookingUrl}
-    target="_blank"
-    rel="noreferrer"
-  >
-    Schedule photography <Arrow />
-  </a>
+      <div className="confidence-card-copy">
+        <h3>HD Photo Hub</h3>
+        <p>
+          Simple scheduling, instant confirmation, and organized appointments.
+        </p>
+      </div>
+    </article>
+
+    <div className="confidence-action">
+      <div>
+        <p className="eyebrow">Ready to schedule?</p>
+
+        <h3>Give your next listing the presentation it deserves.</h3>
+
+        <a
+          className="button confidence-cta"
+          href={bookingUrl}
+          target="_blank"
+          rel="noreferrer"
+        >
+          Schedule photography <Arrow />
+        </a>
+      </div>
+    </div>
+  </div>
 </section>
 
   <section className="recent-work section" id="portfolio"><div className="section-heading"><div><p className="eyebrow">Portfolio preview</p><h2>Recent Work</h2></div><p>A look at the quality and attention to detail we bring to every property.</p></div><div className="recent-work-grid">
