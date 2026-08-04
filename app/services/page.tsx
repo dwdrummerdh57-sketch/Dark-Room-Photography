@@ -64,7 +64,7 @@ export default function ServicesPage() {
             alt="Aerial front view of a two-story home and surrounding property"
           />
           <figcaption>
-            <span>Services for real listings</span>
+            
             <strong>Every property deserves to show up well</strong>
           </figcaption>
         </figure>

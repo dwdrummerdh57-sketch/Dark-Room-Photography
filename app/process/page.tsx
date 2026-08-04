@@ -8,7 +8,7 @@ export default function ProcessPage() {
 
     <section className="process-hero">
       <div><p className="eyebrow">Our process</p><h1>From scheduled<br/><em>to market-ready.</em></h1><p>A clear, dependable workflow that keeps your listing moving from appointment to market.</p><a className="button" href={bookingUrl} target="_blank" rel="noreferrer">Schedule through HD Photo Hub <span aria-hidden="true">↗</span></a></div>
-      <figure><img src="/portfolio/interior-1192.webp" alt="Open kitchen and living area photographed by Dark Room Photography"/><figcaption><span>Simple by design</span><strong>Know what happens at every step</strong></figcaption></figure>
+      <figure><img src="/portfolio/interior-1192.webp" alt="Open kitchen and living area photographed by Dark Room Photography"/><figcaption><strong>Know what happens at every step</strong></figcaption></figure>
     </section>
 
     <section className="process-proof" aria-label="Service expectations"><span>One-hour response</span><span>30–90 minute appointments</span><span>24-hour photo turnaround</span><span>48-hour video turnaround</span></section>
