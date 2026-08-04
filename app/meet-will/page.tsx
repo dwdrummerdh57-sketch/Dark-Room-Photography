@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { SiteFooter, SiteHeader } from "../SiteChrome";
 
 const bookingUrl = "https://darkroomrealestatephotographywg.hd.pics/order";
@@ -28,7 +27,14 @@ function FutureBrandPhoto({
   return (
     <figure className={`future-brand-photo ${className}`.trim()}>
       {/* Replace this file in /public when the finished brand photograph is available. */}
-      <Image src={`/${fileName}`} width={width} height={height} alt={alt} unoptimized />
+      <img
+        src={`/${fileName}`}
+        width={width}
+        height={height}
+        alt={alt}
+        loading="lazy"
+        decoding="async"
+      />
       <figcaption>
         <span>Future Brand Photography</span>
         <strong>{title}</strong>
@@ -56,12 +62,13 @@ export default function MeetWillPage() {
 
     <section className="meet-intro" aria-labelledby="meet-intro-title">
       <figure>
-        <Image
+        <img
           src="/will-headshot.png"
-          width="1140"
-          height="1380"
+          width={1140}
+          height={1380}
           alt="Will Gasper, founder of Dark Room Real Estate Photography, holding his camera."
-          unoptimized
+          loading="eager"
+          decoding="async"
         />
       </figure>
       <div className="meet-story">

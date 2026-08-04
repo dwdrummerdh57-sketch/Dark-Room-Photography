@@ -8,7 +8,7 @@ const services = [
   ["03","Photo + Video Bundles","Complete listing coverage with photography and a two-minute property walkthrough.","bundle"],
   ["04","Matterport 360","Interactive property tours that help buyers explore the space from anywhere.","matterport"],
   ["05","Photo Enhancements","Virtual staging, golden-hour conversions, and grass enhancements for a polished presentation.","enhancement"],
-  ["06","Marketing Kits","Social media assets, a mobile-friendly property website, printable flyers, and more.","marketing"],
+  ["06","Aerial","High-resolution drone photography and video that showcase the property, lot, and surrounding area from above.","aerial"],
 ] as const;
 
 export default function Home(){return <main className="home-page">
@@ -29,7 +29,7 @@ export default function Home(){return <main className="home-page">
     <figure><img src="/portfolio/interior-1172-staged.webp" alt="Professionally staged entry hall with dark wood stairs" loading="lazy"/><figcaption>Virtual Staging</figcaption></figure>
     <figure><img src="/portfolio/interior-1282-staged.webp" alt="Warm staged bedroom prepared for a residential listing" loading="lazy"/><figcaption>Virtual Staging</figcaption></figure>
     <figure><img src="/portfolio/residential-suburban-exterior-backyard-03.webp" alt="Fenced backyard and covered rear patio of a suburban home" loading="lazy"/><figcaption>Exterior Photography</figcaption></figure>
-    <a className="recent-video" href="/portfolio#portfolio-video" aria-label="View the 2317 Eagle Street property video"><img src="/portfolio/interior-1192.webp" alt="Open-plan townhome interior shown as a property video preview" loading="lazy"/><span className="play-control" aria-hidden="true">▶</span><strong>Property Video</strong></a>
+    <a className="recent-video" href="/portfolio/video" aria-label="View the 2317 Eagle Street property video"><img src="/portfolio/interior-1192.webp" alt="Open-plan townhome interior shown as a property video preview" loading="lazy"/><span className="play-control" aria-hidden="true">▶</span><strong>Property Video</strong></a>
   </div><div className="recent-actions"><p>See complete property galleries, interiors, exteriors, video, and floor plans.</p><a className="button portfolio-cta" href="/portfolio">Explore Full Portfolio <Arrow/></a></div><div className="gallery-booking"><div><p className="eyebrow">Your next listing</p><h3>Ready to make your next listing stand out?</h3><p>Fast turnaround, reliable scheduling, and professional media designed to make every property feel its best.</p></div><a className="button" href={bookingUrl} target="_blank" rel="noreferrer">Book Your Shoot <Arrow/></a></div></section>
 
   <section className="process section" id="process"><div className="section-heading"><div><p className="eyebrow">How it works</p><h2>Simple from schedule to delivery.</h2></div><p>No back-and-forth. No uncertainty. Just a dependable process built around your timeline.</p></div><div className="steps"><article><span>01</span><h3>Book online</h3><p>Choose services and a time through HD Photo Hub.</p><small>A few minutes</small></article><article><span>02</span><h3>We capture it</h3><p>Will photographs the property efficiently and with care.</p><small>30–90 minutes</small></article><article><span>03</span><h3>Get your media</h3><p>Your finished portfolio arrives by email, ready to market.</p><small>Simple delivery</small></article></div></section>

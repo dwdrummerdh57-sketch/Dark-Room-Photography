@@ -8,7 +8,7 @@ export default function ProcessPage() {
 
     <section className="process-hero">
       <div><p className="eyebrow">Our process</p><h1>From scheduled<br/><em>to market-ready.</em></h1><p>A clear, dependable workflow that keeps your listing moving from appointment to market.</p><a className="button" href={bookingUrl} target="_blank" rel="noreferrer">Schedule through HD Photo Hub <span aria-hidden="true">↗</span></a></div>
-      <figure><img src="/portfolio/interior-living-room-1212.webp" alt="Bright residential living room prepared for professional real estate photography"/><figcaption><span>Simple by design</span><strong>Know what happens at every step</strong></figcaption></figure>
+      <figure><img src="/portfolio/interior-1192.webp" alt="Open kitchen and living area photographed by Dark Room Photography"/><figcaption><span>Simple by design</span><strong>Know what happens at every step</strong></figcaption></figure>
     </section>
 
     <section className="process-proof" aria-label="Service expectations"><span>One-hour response</span><span>30–90 minute appointments</span><span>24-hour photo turnaround</span><span>48-hour video turnaround</span></section>
@@ -34,11 +34,37 @@ export default function ProcessPage() {
           </div>
         </div>
         <aside className="staging-cta" aria-labelledby="staging-cta-title">
-          <h2 id="staging-cta-title">Make Every Room Stand Out</h2>
-          <p>Professional staging transforms empty spaces into inviting homes buyers can picture themselves living in.</p>
-          <p>Whether you’re listing a vacant property or simply want to maximize your home’s appeal, staging can dramatically improve the final presentation.</p>
-          <p className="staging-question">Need help preparing your listing?</p>
-          <a className="staging-cta-link" href={bookingUrl} target="_blank" rel="noreferrer">Request a Staging Consultation →</a>
+          <h2 id="staging-cta-title">Make Every Room Market-Ready</h2>
+
+<p>
+  Professional staging transforms empty or unfinished spaces into warm,
+  inviting rooms that photograph beautifully and help buyers understand
+  the property’s potential.
+</p>
+
+<p>
+  From furniture placement to finishing details, each room is arranged
+  to feel balanced, purposeful, and ready to make a strong first
+  impression online.
+</p>
+
+<p>
+  Whether the home is vacant or simply needs a more polished presentation,
+  staging helps buyers picture themselves living there.
+</p>
+
+<p className="staging-question">
+  Need help getting the property photo-ready?
+</p>
+
+<a
+  className="staging-cta-link"
+  href={bookingUrl}
+  target="_blank"
+  rel="noreferrer"
+>
+  Request a Staging Consultation →
+</a>
         </aside>
       </div>
 
