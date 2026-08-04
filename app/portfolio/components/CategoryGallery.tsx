@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { PortfolioImage } from "../portfolioData";
 
@@ -64,15 +64,15 @@ export function CategoryGallery({ images, label, preserveImageRatio = false }: C
             onClick={() => setActiveIndex(index)}
             ref={(element) => { triggerRefs.current[index] = element; }}
           >
-            <Image
-              className="category-gallery-image"
-              src={image.src}
-              alt={image.alt}
-              width={1600}
-              height={1067}
-              sizes="(max-width: 760px) 100vw, 50vw"
-              loading="lazy"
-            />
+<img
+  className="category-gallery-image"
+  src={image.src}
+  alt={image.alt}
+  width={1600}
+  height={1067}
+  loading="lazy"
+  decoding="async"
+/>
           </button>
         </figure>
       ))}
@@ -86,7 +86,15 @@ export function CategoryGallery({ images, label, preserveImageRatio = false }: C
           <button ref={closeButtonRef} className="portfolio-lightbox-close" type="button" aria-label="Close image viewer" onClick={closeAndRestoreFocus}>×</button>
           {images.length > 1 && <button className="portfolio-lightbox-previous" type="button" aria-label="View previous image" onClick={previous}>‹</button>}
           <figure className="portfolio-lightbox-figure">
-              <Image className="portfolio-lightbox-image" src={activeImage.src} alt={activeImage.alt} width={1920} height={1280} sizes="100vw" priority />
+             <img
+  className="portfolio-lightbox-image"
+  src={activeImage.src}
+  alt={activeImage.alt}
+  width={1920}
+  height={1280}
+  loading="eager"
+  decoding="async"
+/>
             <figcaption className="portfolio-lightbox-caption">{activeImage.alt}</figcaption>
           </figure>
           {images.length > 1 && <button className="portfolio-lightbox-next" type="button" aria-label="View next image" onClick={next}>›</button>}
