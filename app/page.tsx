@@ -6,7 +6,8 @@ const services = [
   ["01","Video","Cinematic walkthroughs that hold attention, reveal the flow of a home, and help listings earn more engagement.","video"],
   ["02","Photography","Clean, bright listing photography composed to make every room feel inviting.","photo"],
   ["03","Photo + Video Bundles","Complete listing coverage with photography and a two-minute property walkthrough.","bundle"],
-  ["04","Matterport 360","Interactive property tours that help buyers explore the space from anywhere.","matterport"],
+  ["04","Marketing Kit","Social media assets, a mobile-friendly property website, printable flyers, and more.",
+  "marketing",],
   ["05","Photo Enhancements","Virtual staging, golden-hour conversions, and grass enhancements for a polished presentation.","enhancement"],
   ["06","Aerial","High-resolution drone photography and video that showcase the property, lot, and surrounding area from above.","aerial"],
 ] as const;

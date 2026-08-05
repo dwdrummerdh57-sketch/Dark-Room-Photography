@@ -193,11 +193,29 @@ export default function ServicesPage() {
   <article>
     <span>Virtual staging</span>
     <strong>$20 / photo</strong>
+    <small>
+  Add realistic furniture and décor to an empty interior photograph.
+</small>
   </article>
 
   <article>
     <span>Grass enhancement</span>
     <strong>$10 / photo</strong>
+    <small>
+  Improve dull or patchy lawns for a cleaner exterior presentation.
+</small>
+  </article>
+
+    <article>
+    <span>2D Floor Plan</span>
+
+    <div>
+      <strong>$25</strong>
+      <small>
+        Clean, easy-to-read property layout showing room placement and
+        approximate dimensions.
+      </small>
+    </div>
   </article>
 
   <article>
@@ -247,30 +265,6 @@ export default function ServicesPage() {
 </div>
       </section>
 
-      <section className="price-section">
-        <div className="price-heading">
-          <div>
-            <p className="eyebrow">Immersive media</p>
-            <h2>Matterport 360 tours</h2>
-          </div>
-          <p>Give buyers an interactive way to explore the property from anywhere.</p>
-        </div>
-        <div className="price-list">
-          {matterportTours.map(([title, details, price], index) => (
-            <article className="price-row" key={title}>
-              <span className="price-number">{String(index + 1).padStart(2, "0")}</span>
-              <div>
-                <h3>{title}</h3>
-                <p>{details}</p>
-              </div>
-              <strong>{price}</strong>
-              <a href={bookingUrl} target="_blank" rel="noreferrer">
-                Select ↗
-              </a>
-            </article>
-          ))}
-        </div>
-      </section>
 
       <section className="price-section featured-pricing">
         <div className="price-heading">

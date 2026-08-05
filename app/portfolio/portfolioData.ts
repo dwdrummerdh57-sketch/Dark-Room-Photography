@@ -50,8 +50,7 @@ const interiors: readonly PortfolioImage[] = [
   { src: "/portfolio/interior-0921.webp", alt: "White kitchen with island and French doors" },
   { src: "/portfolio/interior-0929.webp", alt: "Updated kitchen with white cabinetry and stainless appliances" },
   { src: "/portfolio/interior-0961.webp", alt: "Clean empty bedroom with neutral carpet" },
-  { src: "/portfolio/interior-1172.webp", alt: "Unfurnished entry hall with dark wood stairs" },
-  { src: "/portfolio/interior-1172-staged.webp", alt: "Virtually staged entry hall with console and artwork" },
+  /* REMOVED INTERIOR/INTERIOR-1172 WEBP IMAGE */
   { src: "/portfolio/interior-1192.webp", alt: "Open kitchen and living area with dark wood floors" },
   { src: "/portfolio/interior-1216.webp", alt: "Modern kitchen with a green feature wall" },
   { src: "/portfolio/interior-1256.webp", alt: "Unfurnished bedroom with balcony doors" },

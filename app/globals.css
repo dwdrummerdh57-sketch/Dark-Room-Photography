@@ -2118,7 +2118,7 @@ footer{
 
 .pricing-page .addon-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   border-top: 1px solid var(--line);
   border-left: 1px solid var(--line);
 }
@@ -2359,9 +2359,6 @@ footer{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .pricing-page .addon-grid article:last-child {
-    grid-column: 1 / -1;
-  }
 
   .pricing-page .golden-hour-feature {
     flex-direction: column;
