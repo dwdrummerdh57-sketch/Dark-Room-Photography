@@ -15,11 +15,71 @@ const services = [
 export default function Home(){return <main className="home-page">
   <SiteHeader active="home"/>
 
-  <section className="hero" id="top"><div className="hero-image"><img src="/portfolio/twilight-favorite.webp" alt="Welcoming suburban home photographed at twilight by Dark Room Photography"/><div className="image-tag"><strong>Because every listing deserves its best first impression.</strong></div></div><div className="hero-copy"><p className="eyebrow">Real estate photography + video</p><h1>Every <span>Property</span> Presented<br/><em>with purpose.</em></h1><p className="hero-intro"> Professional.  Reliable.  Responsive.</p><div className="hero-actions"><a className="button" href={bookingUrl} target="_blank" rel="noreferrer">Book a shoot <Arrow/></a><a className="text-link" href="/portfolio">View portfolio →</a></div><p className="booking-note"><span/> Fast online scheduling through HD Photo Hub</p></div></section>
+  <section className="hero" id="top">
+    <div className="hero-image">
+      <img src="/portfolio/twilight-favorite.webp" 
+      alt="Welcoming suburban home photographed at twilight by Dark Room Photography"/>
+      <div className="image-tag"><strong>Because every listing deserves its best first impression.</strong>
+      </div>
+      </div>
+      <div className="hero-copy"><p className="eyebrow">Real estate photography + video</p>
+      <h1>Every <span>Property</span> Presented<br/><em>with purpose.</em></h1>
+      <p className="hero-intro"> Professional.  Reliable.  Responsive.</p>
+      <div className="hero-actions">
+        <a className="button" 
+        href={bookingUrl} 
+        target="_blank" 
+        rel="noreferrer">Book a shoot <Arrow/></a>
+        
+        <a className="text-link" 
+        href="/portfolio">View portfolio →</a>
+        </div>
+        <p className="booking-note"><span/> Fast online scheduling through HD Photo Hub</p>
+        </div>
+        </section>
 
-  <section className="trust-strip" aria-label="Professional trust indicators"><article><strong>✓ Supra eKEY</strong><span>Certified access</span></article><article><strong>✓ HAR</strong><span>Affiliated locally</span></article><article><strong>✓ One-hour</strong><span>Response time</span></article><article><strong>✓ Fast</strong><span>Turnaround</span></article><article><strong>✓ HD Photo Hub</strong><span>Simple scheduling</span></article></section>
+  <section className="trust-strip" 
+  aria-label="Professional trust indicators">
+    <article><strong>✓ Supra eKEY</strong><span>Certified access</span>
+    </article>
+    
+    <article><strong>✓ HAR</strong><span>Affiliated locally</span>
+    </article>
+    
+    <article><strong>✓ One-hour</strong><span>Response time</span>
+    </article>
+    
+    <article><strong>✓ Fast</strong><span>Turnaround</span>
+    </article>
+    
+    <article><strong>✓ HD Photo Hub</strong><span>Simple scheduling</span>
+    </article>
+    </section>
 
-  <section className="services section" id="services"><div className="section-heading"><div><p className="eyebrow">Services</p><h2>Everything your listing needs to stand out.</h2></div><p>Choose the essentials or build a complete media package around your property and timeline.</p></div><div className="credentials" aria-label="Professional credentials"><article><span className="credential-mark">S</span><div><small>Property access</small><strong>Supra eKEY Certified</strong></div></article><article><span className="credential-mark">H</span><div><small>Local industry</small><strong>HAR Affiliated</strong></div></article><p>Trusted access and local industry familiarity help keep every appointment organized, secure, and easy for agents.</p></div><div className="service-masonry">{services.map(([number,title,copy,kind])=><article className={`service-card service-${kind}`} key={title}><div className="service-copy"><span>{number}</span><h3>{title}</h3><p>{copy}</p><a href={bookingUrl} target="_blank" rel="noreferrer">Book this service <Arrow/></a></div></article>)}</div></section>
+  <section className="services section" 
+  id="services"><div className="section-heading">
+    <div>
+      <p className="eyebrow">Services</p>
+      <h2>Everything your listing needs to stand out.</h2>
+      </div>
+      <p>Choose the essentials or build a complete media package around your property and timeline.</p>
+      </div>
+      <div className="credentials" 
+      aria-label="Professional credentials">
+        <article><span className="credential-mark">S</span>
+        <div><small>Property access</small><strong>Supra eKEY Certified</strong>
+        </div>
+        </article>
+        
+        <article>
+          <span className="credential-mark">H</span>
+        <div><small>Local industry</small><strong>HAR Affiliated</strong>
+        </div>
+        </article>
+        <p>Trusted access and local industry familiarity help keep every appointment organized, secure, and easy for agents.</p>
+        </div>
+        
+        <div className="service-masonry">{services.map(([number,title,copy,kind])=><article className={`service-card service-${kind}`} key={title}><div className="service-copy"><span>{number}</span><h3>{title}</h3><p>{copy}</p><a href={bookingUrl} target="_blank" rel="noreferrer">Book this service <Arrow/></a></div></article>)}</div></section>
 
   <section
   className="confidence section"
@@ -109,15 +169,53 @@ export default function Home(){return <main className="home-page">
   </div>
 </section>
 
-  <section className="recent-work section" id="portfolio"><div className="section-heading"><div><p className="eyebrow">Portfolio preview</p><h2>Recent Work</h2></div><p>A look at the quality and attention to detail we bring to every property.</p></div><div className="recent-work-grid">
-    <figure className="recent-wide"><img src="/portfolio/twilight-favorite.webp" alt="Green suburban home photographed at twilight with warm interior lights" loading="lazy"/><figcaption>Twilight Photography</figcaption></figure>
-    <figure><img src="/portfolio/residential-suburban-kitchen-04.webp" alt="Bright kitchen opening into an unfurnished living room" loading="lazy"/><figcaption>Interior Photography</figcaption></figure>
-    <figure><img src="/portfolio/residential-suburban-exterior-front-01.webp" alt="Front elevation of a two-story brick and stone suburban home" loading="lazy"/><figcaption>Exterior Photography</figcaption></figure>
-    <figure><img src="/portfolio/interior-1172-staged.webp" alt="Professionally staged entry hall with dark wood stairs" loading="lazy"/><figcaption>Virtual Staging</figcaption></figure>
-    <figure><img src="/portfolio/interior-1282-staged.webp" alt="Warm staged bedroom prepared for a residential listing" loading="lazy"/><figcaption>Virtual Staging</figcaption></figure>
-    <figure><img src="/portfolio/residential-suburban-exterior-backyard-03.webp" alt="Fenced backyard and covered rear patio of a suburban home" loading="lazy"/><figcaption>Exterior Photography</figcaption></figure>
-    <a className="recent-video" href="/portfolio/video" aria-label="View the 2317 Eagle Street property video"><img src="/portfolio/interior-1192.webp" alt="Open-plan townhome interior shown as a property video preview" loading="lazy"/><span className="play-control" aria-hidden="true">▶</span><strong>Property Video</strong></a>
-  </div><div className="recent-actions"><p>See complete property galleries, interiors, exteriors, video, and floor plans.</p><a className="button portfolio-cta" href="/portfolio">Explore Full Portfolio <Arrow/></a></div><div className="gallery-booking"><div><p className="eyebrow">Your next listing</p><h3>Present your next listing at its best.</h3><p>Professional media, dependable scheduling, and fast turnaround for every shoot.</p></div><a className="button" href={bookingUrl} target="_blank" rel="noreferrer">Book Your Shoot <Arrow/></a></div></section>
+  <section className="recent-work section" 
+  id="portfolio">
+    <div className="section-heading">
+      <div>
+        <p className="eyebrow">Portfolio preview</p>
+        <h2>Recent Work</h2>
+        </div>
+        <p>A look at the quality and attention to detail we bring to every property.</p>
+        </div><div className="recent-work-grid">
+    <figure className="recent-wide">
+      <img src="/portfolio/twilight-1154.webp" 
+      alt="3 story suburban town-home photographed at twilight with warm interior lights" 
+      loading="lazy"/><figcaption>Twilight Photography</figcaption>
+      </figure>
+    <figure>
+      <img src="/portfolio/residential-suburban-kitchen-04.webp" 
+      alt="Bright kitchen opening into an unfurnished living room" 
+      loading="lazy"/><figcaption>Interior Photography</figcaption>
+      </figure>
+    <figure>
+      <img src="/portfolio/residential-suburban-exterior-angle-02.webp" 
+      alt="Front elevation of a two-story brick and stone suburban home" 
+      loading="lazy"/><figcaption>Exterior Photography</figcaption>
+      </figure>
+
+    <a className="recent-video" 
+    href="/portfolio/video" 
+    aria-label="View the 2317 Eagle Street property video">
+      <img src="/portfolio/interior-1192.webp" 
+      alt="Open-plan townhome interior shown as a property video preview" 
+      loading="lazy"/><span className="play-control" aria-hidden="true">▶</span><strong>Property Video</strong>
+      </a>
+
+    <figure>
+      <img src="/portfolio/interior-1282-staged.webp" 
+      alt="Warm staged bedroom prepared for a residential listing" 
+      loading="lazy"/><figcaption>Virtual Staging</figcaption>
+      </figure>
+
+  </div>
+  
+  <div className="recent-actions">
+    <p>See complete property galleries, interiors, exteriors, video, and floor plans.</p>
+    <a className="button portfolio-cta" 
+    href="/portfolio">Explore Full Portfolio <Arrow/></a>
+    </div>
+    </section>
 
   <section className="process section" id="process"><div className="section-heading"><div><p className="eyebrow">How it works</p><h2>Simple from booking to delivery.</h2></div><p>No back-and-forth. No uncertainty. Just a dependable process built around your timeline.</p></div><div className="steps"><article><span>01</span><h3>Book online</h3><p>Choose services and a time through HD Photo Hub.</p><small>A few minutes</small></article><article><span>02</span><h3>We capture it</h3><p>Will photographs the property efficiently and with care.</p><small>30–90 minutes</small></article><article><span>03</span><h3>Get your media</h3><p>Your finished portfolio arrives by email, ready to market.</p><small>Simple delivery</small></article></div></section>
 
