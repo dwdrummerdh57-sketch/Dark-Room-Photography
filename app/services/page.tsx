@@ -179,21 +179,25 @@ export default function ServicesPage() {
           </div>
           <p>Add aerial photography or video to show the full property, surrounding land, and neighborhood.</p>
         </div>
-        <div className="price-list">
-          {aerialServices.map(([title, details, price], index) => (
-            <article className="price-row" key={title}>
-              <span className="price-number">{String(index + 1).padStart(2, "0")}</span>
-              <div>
-                <h3>{title}</h3>
-                <p>{details}</p>
-              </div>
-              <strong>{price}</strong>
-              <a href={bookingUrl} target="_blank" rel="noreferrer">
-               View Current Pricing ↗
-              </a>
-            </article>
-          ))}
-        </div>
+
+<div className="price-list">
+  {aerialServices.map(([title, details], index) => (
+    <article className="price-row" key={title}>
+      <span className="price-number">
+        {String(index + 1).padStart(2, "0")}
+      </span>
+
+      <div>
+        <h3>{title}</h3>
+        <p>{details}</p>
+      </div>
+
+      <a href={bookingUrl} target="_blank" rel="noreferrer">
+        View Current Pricing ↗
+      </a>
+    </article>
+  ))}
+</div>
       </section>
 
       <section className="price-section enhancements-section">
