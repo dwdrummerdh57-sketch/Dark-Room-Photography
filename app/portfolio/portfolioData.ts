@@ -71,6 +71,20 @@ const interiors: readonly PortfolioImage[] = [
   { src: "/portfolio/residential-suburban-flex-room-11.webp", alt: "Open flex room ready for multiple uses" },
   { src: "/portfolio/residential-suburban-secondary-bathroom-12.webp", alt: "Clean secondary bathroom" },
   { src: "/portfolio/residential-suburban-bedroom-13.webp", alt: "Secondary bedroom with neutral finishes" },
+  { src: "/portfolio/point-arbor-court/point-arbor-laundry.webp", alt: "Custom laundry room with built-in cabinetry and storage" },
+{ src: "/portfolio/point-arbor-court/point-arbor-flex-room.webp", alt: "Bright flex room with wood flooring and large windows" },
+{ src: "/portfolio/point-arbor-court/point-arbor-primary-bedroom.webp", alt: "Primary bedroom with tray ceiling and dark accent wall" },
+{ src: "/portfolio/point-arbor-court/point-arbor-primary-bath-shower.webp", alt: "Primary bathroom with glass shower and soaking tub" },
+{ src: "/portfolio/point-arbor-court/point-arbor-primary-bath-vanity.webp", alt: "Primary bathroom with double vanity and shiplap accent wall" },
+{ src: "/portfolio/point-arbor-court/point-arbor-walk-in-closet.webp", alt: "Walk-in closet with built-in shelving and storage" },
+{ src: "/portfolio/point-arbor-court/point-arbor-family-dining-wide.webp", alt: "Wide open-concept family and dining area with wood flooring" },
+{ src: "/portfolio/point-arbor-court/point-arbor-dining-area.webp", alt: "Dining area with chandelier and large windows" },
+{ src: "/portfolio/point-arbor-court/point-arbor-kitchen-front.webp", alt: "Kitchen with dark wood cabinetry, granite island, and stainless appliances" },
+{ src: "/portfolio/point-arbor-court/point-arbor-kitchen-angle.webp", alt: "Angled view of kitchen with granite island and open floor plan" },
+{ src: "/portfolio/point-arbor-court/point-arbor-upstairs-room-01.webp", alt: "Spacious upstairs bonus room with neutral carpet" },
+{ src: "/portfolio/point-arbor-court/point-arbor-upstairs-room-02.webp", alt: "Second view of spacious upstairs bonus room" },
+{ src: "/portfolio/point-arbor-court/point-arbor-media-room-01.webp", alt: "Dedicated dark media room with projector and geometric wall treatment" },
+{ src: "/portfolio/point-arbor-court/point-arbor-media-room-02.webp", alt: "Home theater with projection screen and recessed lighting" },
 ];
 
 const exteriors: readonly PortfolioImage[] = [
@@ -84,6 +98,8 @@ const exteriors: readonly PortfolioImage[] = [
   { src: "/portfolio/residential-suburban-exterior-front-01.webp", alt: "Front exterior of a two-story brick and stone suburban home" },
   { src: "/portfolio/residential-suburban-exterior-angle-02.webp", alt: "Angled exterior view of a two-story suburban home" },
   { src: "/portfolio/residential-suburban-exterior-backyard-03.webp", alt: "Fenced backyard and covered rear patio" },
+  { src: "/portfolio/point-arbor-court/point-arbor-exterior-front.webp", alt: "Front exterior of brick and stone suburban home" },
+{ src: "/portfolio/point-arbor-court/point-arbor-entry.webp", alt: "Covered front entry with brick, stone, and landscaped walkway" },
 ];
 
 const twilight: readonly PortfolioImage[] = [
@@ -91,6 +107,7 @@ const twilight: readonly PortfolioImage[] = [
   { src: "/portfolio/twilight-favorite.webp", alt: "Green suburban home photographed at twilight" },
   { src: "/portfolio/twilight-1154.webp", alt: "Modern townhomes photographed under a vivid twilight sky" },
   { src: "/portfolio/twilight-1158.webp", alt: "Angled twilight view of modern townhomes with illuminated windows" },
+  { src: "/portfolio/point-arbor-court/point-arbor-twilight.webp", alt: "Brick and stone home photographed during golden hour" },
 ];
 
 const aerial: readonly PortfolioImage[] = [
@@ -103,6 +120,9 @@ const floorPlans: readonly PortfolioImage[] = [
   { src: "/portfolio/floorplan-first.webp", alt: "First-floor plan with garage, foyer, room, and bathroom" },
   { src: "/portfolio/floorplan-second.webp", alt: "Second-floor plan with kitchen, dining area, and living room" },
   { src: "/portfolio/floorplan-third.webp", alt: "Third-floor plan with bedrooms, bathrooms, laundry, and closets" },
+  { src: "/portfolio/point-arbor-court/point-arbor-floorplan-all.webp", alt: "Complete first and second floor plan for Point Arbor Court" },
+{ src: "/portfolio/point-arbor-court/point-arbor-floorplan-first.webp", alt: "First-floor plan for Point Arbor Court" },
+{ src: "/portfolio/point-arbor-court/point-arbor-floorplan-second.webp", alt: "Second-floor plan for Point Arbor Court" },
 ];
 
 export const portfolioCategories: readonly PortfolioCategory[] = [

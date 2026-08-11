@@ -3,27 +3,45 @@ import { SiteFooter, SiteHeader } from "../SiteChrome";
 const bookingUrl = "https://darkroomrealestatephotographywg.hd.pics/order";
 
 const photoPackages = [
-  ["Up to 1,999 sq. ft.", "20–25 photos", "24-hour turnaround", "$150"],
-  ["2,000–2,999 sq. ft.", "25–30 photos", "24-hour turnaround", "$175"],
-  ["3,000–3,999 sq. ft.", "30–40 photos", "24-hour turnaround", "$225"],
-  ["4,000–4,999 sq. ft.", "40–50 photos", "24-hour turnaround", "$325"],
-  ["5,000–6,999 sq. ft.", "50–60 photos", "24-hour turnaround", "$425"],
-  ["7,000+ sq. ft.", "Custom coverage", "Contact for availability", "Quote"],
-  ["Small shoot", "10 photos", "24-hour turnaround", "$95"],
-  ["Exterior only", "5–6 photos", "24-hour turnaround", "$85"],
-  ["Community photos", "5–6 photos", "Add-on coverage", "$25"],
+  ["Up to 1,999 sq. ft.", "Professional interior and exterior photography"],
+  ["2,000–2,999 sq. ft.", "Professional interior and exterior photography"],
+  ["3,000–3,999 sq. ft.", "Professional interior and exterior photography"],
+  ["4,000–4,999 sq. ft.", "Professional interior and exterior photography"],
+  ["5,000–6,999 sq. ft.", "Professional interior and exterior photography"],
+  ["7,000+ sq. ft.", "Custom property coverage"],
+  ["Small shoot", "Focused photography for smaller listing needs"],
+  ["Exterior only", "Professional exterior property photography"],
+  ["Community photos", "Additional neighborhood and community coverage"],
 ];
 
 const videoServices = [
-  ["2-minute property walkthrough", "With or without music · Agent introduction +$25", "$200"],
-  ["3-minute property walkthrough", "With or without music · Agent introduction +$25", "$250"],
+  [
+    "2-minute property walkthrough",
+    "Cinematic property walkthrough with available customization options"
+  ],
+  [
+    "3-minute property walkthrough",
+    "Extended cinematic walkthrough for larger properties and additional coverage"
+  ],
 ];
 
 const aerialServices = [
-  ["Aerial photography add-on", "Add 6 aerial photos to any photo package", "$75"],
-  ["Extended aerial photography add-on", "Add 6–10 aerial photos to any photo package", "$125"],
-  ["30-second aerial video", "Standalone aerial property video", "$175"],
-  ["1-minute aerial video", "Standalone aerial property video", "$225"],
+  [
+    "Aerial photography add-on",
+    "Aerial property photography available with listing packages"
+  ],
+  [
+    "Extended aerial photography",
+    "Expanded aerial coverage for properties that need additional context"
+  ],
+  [
+    "30-second aerial video",
+    "Short-form aerial property video"
+  ],
+  [
+    "1-minute aerial video",
+    "Extended aerial property video"
+  ],
 ];
 
 const matterportTours = [
@@ -37,18 +55,15 @@ const matterportTours = [
 const bundles = [
   [
     "Up to 2,999 sq. ft.",
-    "25–30 photos + 2-minute video · Agent introduction +$15 · Photos in 24 hours · Video in 48 hours",
-    "$325",
+    "Complete photography and property video coverage"
   ],
   [
     "3,000–3,999 sq. ft.",
-    "30–40 photos + 2-minute video · Agent introduction +$15 · Photos in 24 hours · Video in 48 hours",
-    "$375",
+    "Complete photography and property video coverage"
   ],
   [
     "4,000–4,999 sq. ft.",
-    "40–50 photos + 2-minute video · Agent introduction +$15 · Photos in 24 hours · Video in 48 hours",
-    "$475",
+    "Complete photography and property video coverage"
   ],
 ];
 
@@ -70,7 +85,7 @@ export default function ServicesPage() {
         </figure>
         <div className="subpage-hero-copy">
           <div>
-            <p className="eyebrow">Services &amp; straightforward pricing</p>
+            <p className="eyebrow">Professional real estate media</p>
             <h1>
               Coverage built
               <br />
@@ -79,8 +94,10 @@ export default function ServicesPage() {
           </div>
           <div>
             <p>
-              Clear pricing, dependable turnaround, and professional media designed to help every property
-              show at its best.
+             <p>
+  Professional media, dependable turnaround, and flexible coverage
+  designed around the needs of your listing.
+</p>
             </p>
             <a className="button" href={bookingUrl} target="_blank" rel="noreferrer">
               Book through HD Photo Hub <span aria-hidden="true">↗</span>
@@ -107,19 +124,17 @@ export default function ServicesPage() {
           </p>
         </div>
         <div className="price-list">
-          {photoPackages.map(([title, photos, turnaround, price], index) => (
+         {photoPackages.map(([title, details], index) => (
             <article className="price-row" key={title}>
               <span className="price-number">{String(index + 1).padStart(2, "0")}</span>
               <div>
                 <h3>{title}</h3>
-                <p>
-                  {photos} · {turnaround}
-                </p>
+<p>{details}</p>
               </div>
-              <strong>{price}</strong>
-              <a href={bookingUrl} target="_blank" rel="noreferrer">
-                Select ↗
-              </a>
+
+<a href={bookingUrl} target="_blank" rel="noreferrer">
+  View Current Pricing ↗
+</a>
             </article>
           ))}
         </div>
@@ -137,17 +152,19 @@ export default function ServicesPage() {
           </div>
           <p>Professional walkthrough videos built to show the property clearly and keep viewers engaged.</p>
         </div>
+        
+        
         <div className="price-list">
-          {videoServices.map(([title, details, price], index) => (
+  {videoServices.map(([title, details], index) => (
             <article className="price-row" key={title}>
               <span className="price-number">{String(index + 1).padStart(2, "0")}</span>
               <div>
                 <h3>{title}</h3>
                 <p>{details}</p>
               </div>
-              <strong>{price}</strong>
+
               <a href={bookingUrl} target="_blank" rel="noreferrer">
-                Select ↗
+                View Current Pricing ↗
               </a>
             </article>
           ))}
@@ -172,7 +189,7 @@ export default function ServicesPage() {
               </div>
               <strong>{price}</strong>
               <a href={bookingUrl} target="_blank" rel="noreferrer">
-                Select ↗
+               View Current Pricing ↗
               </a>
             </article>
           ))}
@@ -190,42 +207,53 @@ export default function ServicesPage() {
        
        
    <div className="addon-grid">
-  <article>
-    <span>Virtual staging</span>
-    <strong>$20 / photo</strong>
-    <small>
-  Add realistic furniture and décor to an empty interior photograph.
-</small>
-  </article>
+<article>
+  <span>Virtual staging</span>
+  <small>
+    Add realistic furniture and décor to an empty interior photograph.
+  </small>
+  <a href={bookingUrl} target="_blank" rel="noreferrer">
+    Add to your shoot ↗
+  </a>
+</article>
 
-  <article>
-    <span>Grass enhancement</span>
-    <strong>$10 / photo</strong>
-    <small>
-  Improve dull or patchy lawns for a cleaner exterior presentation.
-</small>
-  </article>
+<article>
+  <span>Grass enhancement</span>
 
-    <article>
-    <span>2D Floor Plan</span>
+  <small>
+    Improve dull or patchy lawns for a cleaner exterior presentation.
+  </small>
 
-    <div>
-      <strong>$25</strong>
-      <small>
-        Clean, easy-to-read property layout showing room placement and
-        approximate dimensions.
-      </small>
-    </div>
-  </article>
+  <a href={bookingUrl} target="_blank" rel="noreferrer">
+    Add to your shoot ↗
+  </a>
+</article>
 
-  <article>
-    <span>Marketing kit</span>
-    <strong>$75</strong>
-    <small>
-      Social media assets, mobile-friendly property website,
-      printable flyers, and more.
-    </small>
-  </article>
+<article>
+  <span>2D Floor Plan</span>
+
+  <small>
+    Clean, easy-to-read property layout showing room placement and
+    approximate dimensions.
+  </small>
+
+  <a href={bookingUrl} target="_blank" rel="noreferrer">
+    Add to your shoot ↗
+  </a>
+</article>
+
+<article>
+  <span>Marketing kit</span>
+
+  <small>
+    Social media assets, mobile-friendly property website,
+    printable flyers, and more.
+  </small>
+
+  <a href={bookingUrl} target="_blank" rel="noreferrer">
+    Add to your shoot ↗
+  </a>
+</article>
 </div>
 
 <div className="golden-hour-feature">
@@ -256,9 +284,7 @@ export default function ServicesPage() {
       stand out.
     </p>
 
-    <strong>$25 / 2 exterior photos</strong>
-
-    <a href={bookingUrl} target="_blank" rel="noreferrer">
+<a href={bookingUrl} target="_blank" rel="noreferrer">
       Add to your shoot ↗
     </a>
   </div>
@@ -275,16 +301,16 @@ export default function ServicesPage() {
           <p>Complete photo and video coverage packaged together for the strongest overall value.</p>
         </div>
         <div className="price-list">
-          {bundles.map(([title, details, price], index) => (
+          {bundles.map(([title, details], index) => (
             <article className="price-row featured" key={title}>
               <span className="price-number">{String(index + 1).padStart(2, "0")}</span>
               <div>
                 <h3>{title}</h3>
                 <p>{details}</p>
               </div>
-              <strong>{price}</strong>
+             
               <a href={bookingUrl} target="_blank" rel="noreferrer">
-                Book bundle ↗
+                View Current Pricing ↗
               </a>
             </article>
           ))}

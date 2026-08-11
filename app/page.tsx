@@ -177,17 +177,27 @@ export default function Home(){return <main className="home-page">
         <h2>Recent Work</h2>
         </div>
         <p>A look at the quality and attention to detail we bring to every property.</p>
-        </div><div className="recent-work-grid">
-    <figure className="recent-wide">
-      <img src="/portfolio/twilight-1154.webp" 
-      alt="3 story suburban town-home photographed at twilight with warm interior lights" 
-      loading="lazy"/><figcaption>Twilight Photography</figcaption>
-      </figure>
-    <figure>
-      <img src="/portfolio/residential-suburban-kitchen-04.webp" 
-      alt="Bright kitchen opening into an unfurnished living room" 
-      loading="lazy"/><figcaption>Interior Photography</figcaption>
-      </figure>
+        </div>
+        
+        <div className="recent-work-grid">
+
+<figure className="recent-wide">
+  <img
+    src="/portfolio/point-arbor-court/point-arbor-twilight.webp"
+    alt="Brick and stone home photographed during golden hour with warm exterior lighting"
+    loading="lazy"
+  />
+  <figcaption>Twilight Photography</figcaption>
+</figure>
+    
+<figure>
+  <img
+    src="/portfolio/point-arbor-court/point-arbor-kitchen-front.webp"
+    alt="Kitchen with dark wood cabinetry, granite island, and stainless appliances"
+    loading="lazy"
+  />
+  <figcaption>Interior Photography</figcaption>
+</figure>
     <figure>
       <img src="/portfolio/residential-suburban-exterior-angle-02.webp" 
       alt="Front elevation of a two-story brick and stone suburban home" 
