@@ -5237,109 +5237,10 @@ z-index: 0;
 
 .meet-cta{border-top:1px solid var(--line)}
 
-@media(max-width:900px){
-  .meet-hero,.meet-intro,.meet-purpose,.meet-closing{
-    margin-left:24px;margin-right:24px
-  }
-  
-  .meet-intro{
-    grid-template-columns:1fr;gap:54px
-  }
-  
-  .meet-intro figure{
-    width:min(520px,100%)
-  }
-  
-  .meet-purpose,.meet-closing{
-    grid-template-columns:1fr;gap:36px
-  }
-  
-  .meet-trust-heading{
-    grid-template-columns:1fr;
-    gap:24px
-  }
-  
-  .meet-trust-heading .eyebrow{
-    grid-column:1;
-    margin-bottom:0
-  }
-  
-  .meet-trust-grid{
-    grid-template-columns:1fr 1fr
-  }
-  
-  .meet-trust-grid article:nth-child(2){
-    border-right:0
-  }
-  
-  .meet-trust-grid article:nth-child(-n+2){
-    border-bottom:1px solid var(--line)
-  }
-}
 
 
-@media(max-width:600px){
-  .meet-hero,
-  .meet-intro,
-  .meet-purpose,
-  .meet-closing{
-    margin-left:20px;margin-right:20px
-  }
-  
-  .meet-hero{
-    padding:48px 0 46px
-  }
-  
-  .meet-hero h1{
-    font-size:52px
-  }
-  
-  .meet-intro{
-    padding:54px 0 72px;gap:42px
-  }
-  
-  .meet-story h2,.meet-purpose h2,.meet-trust h2,.meet-closing h2{
-    font-size:40px
-  }
- 
-  .meet-story .meet-lead{
-    padding-left:17px;
-    font-size:17px
-  }
-  
-  .meet-purpose,.meet-closing{
-    padding:72px 0
-  }
- 
-  .meet-trust{
-    padding:70px 20px
-  }
-  
-  .meet-trust-grid{
-    grid-template-columns:1fr
-  }
-  
-  .meet-trust-grid article{
-    min-height:auto;
-    border-right:0;
-    border-bottom:1px solid var(--line)
-  }
-  
-  .meet-trust-grid article:last-child{
-    border-bottom:0
-  }
-  
-  .meet-trust-grid span{
-    margin-bottom:24px
-  }
-  
-  .meet-partnership{padding:78px 20px
-  }
 
-  .meet-partnership h2{
-    font-size:43px
-  }
-}
+
 
 /* Presentation-ready replacement points for Will's future brand photography. */
 
@@ -5444,20 +5345,242 @@ z-index: 0;
   width:min(1166px,calc(100% - 48px));margin:0 auto 92px;aspect-ratio:16/9
 }
 
-@media(max-width:900px){
-  .future-brand-photo-interior{width:min(620px,100%)}
-  .future-brand-photo-greeting{width:min(620px,100%)}
-  .future-brand-photo-exterior{width:calc(100% - 48px);margin-bottom:76px}
+/* ==================================================
+   MEET WILL — RESPONSIVE
+================================================== */
+
+
+/* --------------------------------------------------
+   TABLET — 900px and below
+-------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+  /* Page width */
+
+  .meet-page .meet-hero,
+  .meet-page .meet-intro,
+  .meet-page .meet-purpose,
+  .meet-page .meet-closing {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+
+
+  /* Hero */
+
+  .meet-page .meet-hero {
+    padding-top: 58px;
+    padding-bottom: 58px;
+  }
+
+
+  /* Intro */
+
+  .meet-page .meet-intro {
+    grid-template-columns: 1fr;
+    gap: 54px;
+  }
+
+  .meet-page .meet-intro figure {
+    width: min(520px, 100%);
+  }
+
+
+  /* Purpose + Closing */
+
+  .meet-page .meet-purpose,
+  .meet-page .meet-closing {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+
+  /* Trust heading */
+
+  .meet-page .meet-trust-heading {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .meet-page .meet-trust-heading .eyebrow {
+    grid-column: 1;
+    margin-bottom: 0;
+  }
+
+
+  /* Trust grid */
+
+  .meet-page .meet-trust-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .meet-page .meet-trust-grid article:nth-child(2) {
+    border-right: 0;
+  }
+
+  .meet-page .meet-trust-grid article:nth-child(-n+2) {
+    border-bottom: 1px solid var(--line);
+  }
+
+
+  /* Future brand photography */
+
+  .meet-page .future-brand-photo-interior,
+  .meet-page .future-brand-photo-greeting {
+    width: min(620px, 100%);
+  }
+
+  .meet-page .future-brand-photo-exterior {
+    width: calc(100% - 48px);
+    margin-bottom: 76px;
+  }
 }
-@media(max-width:600px){
-  .future-brand-photo{border-radius:6px}
-  .future-brand-photo figcaption{padding:22px}
-  .future-brand-photo figcaption strong{font-size:24px}
-  .future-brand-photo figcaption p{margin:9px 0 13px;font-size:12px}
-  .future-brand-photo-interior{margin-top:34px}
-  .future-brand-photo-greeting{margin-top:28px}
-  .future-brand-photo-review{margin-top:36px}
-  .future-brand-photo-exterior{width:calc(100% - 40px);margin-bottom:64px}
+
+
+
+/* --------------------------------------------------
+   MOBILE — 600px and below
+-------------------------------------------------- */
+
+@media (max-width: 600px) {
+
+  /* Page width */
+
+  .meet-page .meet-hero,
+  .meet-page .meet-intro,
+  .meet-page .meet-purpose,
+  .meet-page .meet-closing {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+
+  /* Hero */
+
+  .meet-page .meet-hero {
+    padding: 48px 0 46px;
+  }
+
+  .meet-page .meet-hero h1 {
+    font-size: 52px;
+  }
+
+
+  /* Intro */
+
+  .meet-page .meet-intro {
+    padding: 54px 0 72px;
+    gap: 42px;
+  }
+
+  .meet-page .meet-intro figure {
+    width: 100%;
+  }
+
+  .meet-page .meet-intro figure img {
+    width: 100%;
+    height: auto;
+  }
+
+
+  /* Headings */
+
+  .meet-page .meet-story h2,
+  .meet-page .meet-purpose h2,
+  .meet-page .meet-trust h2,
+  .meet-page .meet-closing h2 {
+    font-size: 40px;
+  }
+
+
+  /* Story */
+
+  .meet-page .meet-story .meet-lead {
+    padding-left: 17px;
+    font-size: 17px;
+  }
+
+
+  /* Purpose + Closing */
+
+  .meet-page .meet-purpose,
+  .meet-page .meet-closing {
+    padding: 72px 0;
+  }
+
+
+  /* Trust */
+
+  .meet-page .meet-trust {
+    padding: 70px 20px;
+  }
+
+  .meet-page .meet-trust-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .meet-page .meet-trust-grid article {
+    min-height: auto;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .meet-page .meet-trust-grid article:last-child {
+    border-bottom: 0;
+  }
+
+  .meet-page .meet-trust-grid span {
+    margin-bottom: 24px;
+  }
+
+
+  /* Partnership */
+
+  .meet-page .meet-partnership {
+    padding: 78px 20px;
+  }
+
+  .meet-page .meet-partnership h2 {
+    font-size: 43px;
+  }
+
+
+  /* Future brand photography */
+
+  .meet-page .future-brand-photo {
+    border-radius: 6px;
+  }
+
+  .meet-page .future-brand-photo figcaption {
+    padding: 22px;
+  }
+
+  .meet-page .future-brand-photo figcaption strong {
+    font-size: 24px;
+  }
+
+  .meet-page .future-brand-photo figcaption p {
+    margin: 9px 0 13px;
+    font-size: 12px;
+  }
+
+  .meet-page .future-brand-photo-interior {
+    margin-top: 34px;
+  }
+
+  .meet-page .future-brand-photo-greeting {
+    margin-top: 28px;
+  }
+
+  .meet-page .future-brand-photo-review {
+    margin-top: 36px;
+  }
+
+  .meet-page .future-brand-photo-exterior {
+    width: calc(100% - 40px);
+    margin-bottom: 64px;
+  }
 }
 
 /* Shared site footer */
