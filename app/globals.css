@@ -2089,79 +2089,7 @@ footer{
    10. Tablet
 ------------------------------------------------------ */
 
-@media (max-width: 900px) {
-  .pricing-hero,
-  .price-section,
-  .pricing-trust {
-    margin-left: 24px;
-    margin-right: 24px;
-  }
 
-  .pricing-hero {
-    padding-top: 80px;
-  }
-
-  .pricing-trust {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .pricing-trust span {
-    padding: 14px;
-    border-top: 1px solid var(--line);
-  }
-
-  .featured-pricing {
-    padding: 54px 36px;
-  }
-
-  .split-pricing {
-    grid-template-columns: 1fr;
-  }
-
-  .pricing-page .enhancements-section .price-heading {
-    grid-template-columns: 1fr;
-    gap: 16px;
-    margin-bottom: 28px;
-  }
-
-  .pricing-page .enhancements-section .price-heading h2 {
-    font-size: 46px;
-  }
-
-  .pricing-page .enhancements-section .price-heading > p {
-    max-width: 560px;
-  }
-
-  .pricing-page .addon-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-
-  .pricing-page .golden-hour-feature {
-    flex-direction: column;
-    min-height: 0;
-  }
-
-  .pricing-page .golden-hour-images {
-    flex: 0 0 380px;
-    min-height: 380px;
-  }
-
-  .pricing-page .golden-hour-images figure {
-    min-height: 380px;
-  }
-
-  .pricing-page .golden-hour-copy {
-    flex: 0 0 auto;
-    min-height: 0;
-    padding: 36px;
-  }
-
-  .pricing-page .golden-hour-copy h3,
-  .pricing-page .golden-hour-copy > p:not(.eyebrow) {
-    max-width: 620px;
-  }
-}
 
 /* BOOKING DROPDOWNS --- IMPORTANT INFORMATION
 ======================================*/
@@ -2265,78 +2193,196 @@ footer{
 }
 
 
-@media (max-width: 640px) {
-  .booking-policies {
-    width: min(100% - 32px, 1120px);
-    padding: 56px 0;
+/* ==================================================
+   SERVICES / PRICING — RESPONSIVE
+================================================== */
+
+
+/* --------------------------------------------------
+   TABLET — 900px and below
+-------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+  /* Page width */
+
+  .pricing-page .pricing-hero,
+  .pricing-page .price-section,
+  .pricing-page .pricing-trust {
+    margin-left: 24px;
+    margin-right: 24px;
   }
 
-  .policy-accordion__summary {
-    padding: 18px;
+
+  /* Hero */
+
+  .pricing-page .pricing-hero {
+    padding-top: 80px;
   }
 
-  .policy-accordion__content {
-    padding: 0 18px 20px;
+
+  /* Trust strip */
+
+  .pricing-page .pricing-trust {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pricing-page .pricing-trust span {
+    padding: 14px;
+    border-top: 1px solid var(--line);
+  }
+
+
+  /* Featured pricing */
+
+  .pricing-page .featured-pricing {
+    padding: 54px 36px;
+  }
+
+
+  /* Split pricing */
+
+  .pricing-page .split-pricing {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* Enhancements */
+
+  .pricing-page .enhancements-section .price-heading {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .pricing-page .enhancements-section .price-heading h2 {
+    font-size: 46px;
+  }
+
+  .pricing-page .enhancements-section .price-heading > p {
+    max-width: 560px;
+  }
+
+  .pricing-page .addon-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+
+  /* Golden Hour */
+
+  .pricing-page .golden-hour-feature {
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .pricing-page .golden-hour-images {
+    flex: 0 0 auto;
+    min-height: 0;
+  }
+
+  .pricing-page .golden-hour-images figure {
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+  }
+
+  .pricing-page .golden-hour-copy {
+    flex: 0 0 auto;
+    min-height: 0;
+    padding: 36px;
+  }
+
+  .pricing-page .golden-hour-copy h3,
+  .pricing-page .golden-hour-copy > p:not(.eyebrow) {
+    max-width: 620px;
   }
 }
 
-/* ------------------------------------------------------
-   11. Mobile
------------------------------------------------------- */
+
+
+/* --------------------------------------------------
+   MOBILE — 600px and below
+-------------------------------------------------- */
 
 @media (max-width: 600px) {
-  .pricing-hero,
-  .price-section,
-  .pricing-trust {
+
+  /* Page width */
+
+  .pricing-page .pricing-hero,
+  .pricing-page .price-section,
+  .pricing-page .pricing-trust {
     margin-left: 20px;
     margin-right: 20px;
   }
 
-  .pricing-hero {
+
+  /* Hero */
+
+  .pricing-page .pricing-hero {
     padding: 64px 0;
   }
 
-  .price-section {
+
+  /* Pricing sections */
+
+  .pricing-page .price-section {
     padding: 72px 0;
   }
 
-  .featured-pricing {
+
+  /* Featured pricing */
+
+  .pricing-page .featured-pricing {
     margin-top: 50px;
     padding: 42px 22px;
   }
 
-  .price-heading {
+
+  /* Section headings */
+
+  .pricing-page .price-heading {
     display: block;
   }
 
-  .price-heading > p {
+  .pricing-page .price-heading > p {
     margin-top: 18px;
   }
 
-.price-row {
-  grid-template-columns: 30px minmax(0, 1fr);
-  gap: 14px;
-  min-height: 126px;
-}
 
-.price-row > a {
-  grid-column: 2;
-  justify-content: flex-start;
-  padding-bottom: 18px;
-  text-align: left;
-}
+  /* Standard price rows */
 
-  .split-pricing .price-row {
+  .pricing-page .price-row {
+    grid-template-columns: 30px minmax(0, 1fr);
+    gap: 14px;
+    min-height: 126px;
+  }
+
+  .pricing-page .price-row > a {
+    grid-column: 2;
+    justify-content: flex-start;
+    padding-bottom: 18px;
+    text-align: left;
+  }
+
+
+  /* Split price rows */
+
+  .pricing-page .split-pricing .price-row {
     grid-template-columns: minmax(0, 1fr) 70px;
   }
 
-  .pricing-trust {
+
+  /* Trust strip */
+
+  .pricing-page .pricing-trust {
     grid-template-columns: 1fr;
   }
 
-  .pricing-trust span {
+  .pricing-page .pricing-trust span {
     border-left: 0;
   }
+
+
+  /* Enhancement heading */
 
   .pricing-page .enhancements-section .price-heading h2 {
     font-size: 39px;
@@ -2346,6 +2392,9 @@ footer{
   .pricing-page .enhancements-section .price-heading > p {
     font-size: 13px;
   }
+
+
+  /* Enhancement cards */
 
   .pricing-page .addon-grid {
     grid-template-columns: 1fr;
@@ -2360,6 +2409,9 @@ footer{
     grid-column: auto;
   }
 
+
+  /* Golden Hour comparison */
+
   .pricing-page .golden-hour-images {
     flex: 0 0 auto;
     flex-direction: column;
@@ -2367,9 +2419,16 @@ footer{
   }
 
   .pricing-page .golden-hour-images figure {
-    flex: 0 0 300px;
+    flex: none;
     width: 100%;
-    min-height: 300px;
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+  }
+
+  .pricing-page .golden-hour-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .pricing-page .golden-hour-copy {
@@ -2390,8 +2449,23 @@ footer{
   .pricing-page .golden-hour-copy strong {
     font-size: 18px;
   }
-}
 
+
+  /* Booking policies */
+
+  .pricing-page .booking-policies {
+    width: min(100% - 32px, 1120px);
+    padding: 56px 0;
+  }
+
+  .pricing-page .policy-accordion__summary {
+    padding: 18px;
+  }
+
+  .pricing-page .policy-accordion__content {
+    padding: 0 18px 20px;
+  }
+}
 
 
 /* Our Process page */
