@@ -3376,17 +3376,6 @@ footer{
 
 
 
-@media(max-width:900px){
-  .portfolio-hero,
-  .portfolio-library{
-    margin-left:24px;
-    margin-right:24px;
-  }
-
-  .full-portfolio-grid{
-    grid-template-columns:repeat(2,minmax(0,1fr));
-  }
-}
 
 /* ==================================================
    PORTFOLIO
@@ -4016,61 +4005,119 @@ z-index: 0;
   outline-offset: 4px;
 }
 
-
 /* ==================================================
-   TABLET
+   PORTFOLIO — RESPONSIVE
 ================================================== */
 
-@media (max-width: 1050px) {
-  .portfolio-category-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 
-.portfolio-page > .page-hero.portfolio-hero {
-  width: calc(100% - 32px);
-  height: auto;
-  min-height: 0;
-  max-height: none;
-  aspect-ratio: 4 / 3;
-  margin-top: 24px;
-}
+/* --------------------------------------------------
+   TABLET — 900px and below
+-------------------------------------------------- */
 
-  .portfolio-page .portfolio-hero h1 {
-    max-width: 780px;
-    font-size: clamp(2.4rem, 5vw, 3.2rem);
-  }
-}
+@media (max-width: 900px) {
 
+  /* Landing-page hero */
 
-@media (max-width: 760px) {
   .portfolio-page > .page-hero.portfolio-hero {
-    height: 320px;
+    width: calc(100% - 48px);
+    height: auto;
     min-height: 0;
-    max-height: 320px;
-  }
-
-  .portfolio-property-page > .page-hero.property-hero {
-    height: 390px;
-    min-height: 0;
-    max-height: 390px;
+    max-height: none;
+    aspect-ratio: 16 / 9;
+    margin-top: 24px;
   }
 
   .portfolio-page
     > .page-hero.portfolio-hero
-    > .page-hero-image,
-  .portfolio-property-page
-    > .page-hero.property-hero
     > .page-hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     object-position: center center;
   }
 
   .portfolio-page
     > .page-hero.portfolio-hero
-    > .page-hero-content,
+    > .page-hero-content {
+    padding: 30px 32px;
+  }
+
+  .portfolio-page .portfolio-hero h1 {
+    max-width: 780px;
+    font-size: clamp(2.4rem, 5vw, 3.2rem);
+  }
+
+
+  /* Individual category hero */
+
+  .portfolio-property-page
+    > .page-hero.property-hero {
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    aspect-ratio: 16 / 7;
+  }
+
+  .portfolio-property-page
+    > .page-hero.property-hero
+    > .page-hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
   .portfolio-property-page
     > .page-hero.property-hero
     > .page-hero-content {
-    padding: 26px 22px;
+    padding: 36px 32px;
+  }
+
+
+  /* Portfolio landing grid */
+
+  .portfolio-page .portfolio-category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+
+  /* Category galleries */
+
+  .portfolio-property-page
+    .property-gallery.portfolio-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+
+  /* Floor plans */
+
+  .portfolio-property-page .property-floor-plans {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+
+/* --------------------------------------------------
+   MOBILE — 600px and below
+-------------------------------------------------- */
+
+@media (max-width: 600px) {
+
+  /* Landing-page hero */
+
+  .portfolio-page > .page-hero.portfolio-hero {
+    width: calc(100% - 40px);
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    aspect-ratio: 4 / 3;
+    margin-top: 20px;
+  }
+
+  .portfolio-page
+    > .page-hero.portfolio-hero
+    > .page-hero-content {
+    padding: 24px 20px;
   }
 
   .portfolio-page .portfolio-hero .eyebrow {
@@ -4083,40 +4130,68 @@ z-index: 0;
     line-height: 1;
   }
 
+  .portfolio-page .portfolio-hero h1 + p {
+    margin-top: 14px;
+    font-size: .9rem;
+    line-height: 1.42;
+  }
+
+
+  /* Individual category hero */
+
+  .portfolio-property-page
+    > .page-hero.property-hero {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    aspect-ratio: 4 / 3;
+  }
+
+  .portfolio-property-page
+    > .page-hero.property-hero
+    > .page-hero-image {
+    object-position: center center;
+  }
+
+  .portfolio-property-page
+    > .page-hero.property-hero
+    > .page-hero-content {
+    padding: 26px 20px;
+  }
+
   .portfolio-property-page .property-hero h1 {
     max-width: 620px;
     font-size: clamp(2.2rem, 10vw, 3rem);
     line-height: 1;
   }
 
-  .portfolio-page .portfolio-hero h1 + p {
-    margin-top: 14px;
-    font-size: 0.9rem;
-    line-height: 1.42;
-  }
 
-  /* Keep the rest of your existing mobile rules here */
+  /* Portfolio landing grid */
 
-
-  .portfolio-category-grid {
+  .portfolio-page .portfolio-category-grid {
     grid-template-columns: 1fr;
   }
 
-  .portfolio-category-card-copy {
+  .portfolio-page .portfolio-category-card-copy {
     gap: 20px;
     padding: 22px;
   }
 
-  .portfolio-category-image-wrap {
-    aspect-ratio: 16 / 10;
+  .portfolio-page .portfolio-category-image-wrap {
+    aspect-ratio: 4 / 3;
   }
 
-  .portfolio-property-page .property-gallery.portfolio-grid,
-  .portfolio-property-page .property-floor-plans {
+
+  /* Category galleries */
+
+  .portfolio-property-page
+    .property-gallery.portfolio-grid {
     grid-template-columns: 1fr;
   }
 
-  .portfolio-property-page .property-gallery-item:first-child {
+  .portfolio-property-page
+    .property-gallery-item:first-child {
     grid-column: auto;
   }
 
@@ -4124,8 +4199,29 @@ z-index: 0;
   .portfolio-property-page
     .property-gallery-item:first-child
     .property-gallery-image {
+    width: 100%;
+    height: auto;
     aspect-ratio: 4 / 3;
+    object-fit: cover;
   }
+
+
+  /* Floor plans */
+
+  .portfolio-property-page .property-floor-plans {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* Property video */
+
+  .portfolio-property-page .property-video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+
+  /* Lightbox */
 
   .property-lightbox-backdrop {
     padding: 12px;
@@ -4166,7 +4262,8 @@ z-index: 0;
   .property-lightbox-next:hover {
     transform: translateX(2px);
   }
-} /* closes @media (max-width: 760px) */
+}
+
 
 
 /* ==================================================
