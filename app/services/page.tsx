@@ -92,17 +92,16 @@ export default function ServicesPage() {
               <em>around your listing.</em>
             </h1>
           </div>
-          <div>
-            <p>
-             <p>
-  Professional media, dependable turnaround, and flexible coverage
-  designed around the needs of your listing.
-</p>
-            </p>
-            <a className="button" href={bookingUrl} target="_blank" rel="noreferrer">
-              Book through HD Photo Hub <span aria-hidden="true">↗</span>
-            </a>
-          </div>
+<div>
+  <p>
+    Professional media, dependable turnaround, and flexible coverage
+    designed around the needs of your listing.
+  </p>
+
+  <a className="button" href={bookingUrl} target="_blank" rel="noreferrer">
+    Book through HD Photo Hub <span aria-hidden="true">↗</span>
+  </a>
+</div>
         </div>
       </section>
 
